@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content= "width=device-width">
+        <title>Words CSJ</title>
+        <script src="https://kit.fontawesome.com/5d7e97a340.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+        <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+
+        <script src="main.js"> </script>
+    </head>
+    <body>
+
+    <h1>
+        CSJ Word Game Generator
+    </h1>
+
+    <div class="add-word-outer-wrapper">
+        <div class="add-word-wrapper">
+            <div class="word-section">
+                <label>New Word</label>
+                <input class="word-input" placeholder="Word" />
+            </div>
+            <div class="word-section">
+                <div class="selector-container tag-selector selector">
+                    <label>Game Type</label>
+                    <select class="choices-multiple-remove-button" placeholder="Select Game Type" multiple>
+                        <option value="Charades">Charades</option>
+                        <option value="Claymation">Claymation</option>
+                        <option value="Concepts">Concepts</option>
+                        <option value="Pictionary">Pictionary</option>
+                    </select>
+                </div>
+            </div>
+            <div class="word-section">
+                <div class="selector-container tag-selector selector">
+                    <label>Categories</label>
+                    <select class="choices-multiple-remove-button" placeholder="Select tags" multiple>
+                        <option value="Animals">Animals</option>
+                        <option value="Nature">Nature</option>
+                        <option value="Food">Food</option>
+                        <option value="Places">Places</option>
+                    </select>
+                </div>
+            </div>
+            <div class="word-section">
+                <label>Difficulty</label>
+                <div class="difficulty selector">
+                    <select class="diff-input">
+                        <option value="Nature">Easy</option>
+                        <option value="Food">Medium</option>
+                        <option value="Places">Hard</option>
+                        <option value="Places">Impossible</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="selector">
+            <button class="submit-button">Submit</button>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <div class="table-headers">
+            <div class="header">
+                All Words
+            </div>
+            <div class="header">
+                Game Type - Difficulty
+            </div>
+            <div class="header">
+                Categories
+            </div>
+        </div>
+        <div class="data-rows">
+<!--            <div class="data-row">-->
+<!--                <div class="word-item">-->
+
+<!--                </div>-->
+<!--                <div class="game-item">-->
+
+<!--                </div>-->
+<!--                <div class="cat-item">-->
+
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+        <script>
+            $(document).ready(function() {
+                var multipleCancelButton = new Choices('.choices-multiple-remove-button', {
+                    removeItemButton: true,
+                    searchResultLimit: 5,
+                    renderChoiceLimit: 5
+                });
+            });
+
+
+        </script>
+    </body>
+</html>
+
+<!DOCTYPE html>
