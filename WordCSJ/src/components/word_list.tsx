@@ -28,13 +28,6 @@ const words = [
           "cat": ["Animal"]
       }
 ]
-words.map((rank, i, {length}) => {
-    if (length - 1 === i) {
-        // last one
-    } else {
-        // not last one
-    }
-});
 
 interface ChildProps {
   newSubmittedWord: NewWord;
@@ -61,6 +54,7 @@ const word_list: React.FC<ChildProps> = ({newSubmittedWord}) => {
   );
 
   useEffect(() => {
+
     
     words.push({
       "word": newSubmittedWord.word,
