@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import type { NewWord } from '../lib/NewSubmittedWord'
+import type { Word } from '../lib/NewSubmittedWord'
 import { useState } from 'react'
 
 
 interface ChildProps {
-  newSubmittedWord: NewWord;
+  newSubmittedWord: Word;
 }
 
 const notification: React.FC<ChildProps> = ({newSubmittedWord}) => { 

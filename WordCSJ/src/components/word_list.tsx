@@ -1,71 +1,53 @@
-import type { NewWord } from '@/lib/NewSubmittedWord';
-import React, {useEffect} from 'react'
+import type { Word } from '@/lib/NewSubmittedWord';
 
-const words = [
-      {
-          "word": "Angel Island",
-          "game": [{"type": "Pictionary", "diff": "Easy"}, {"type": "Claymation", "diff": "Hard"}],
-          "cat": ["Places"]
-      },
-      {
-          "word": "Bat Cave",
-          "game": [{"type": "Pictionary", "diff": "Easy"}, {"type": "Claymation", "diff": "Impossible"}],
-          "cat": ["Places"]
-      },
-      {
-          "word": "Beer",
-          "game": [{"type": "Charades", "diff": "Medium"}, {"type": "Pictionary", "diff": "Impossible"}, {"type": "Claymation", "diff": "Hard"}],
-          "cat": ["Thing", "Food"]
-      },
-      {
-          "word": "Beetle Juice",
-          "game": [{"type": "Charades", "diff": "Easy"}, {"type": "Pictionary", "diff": "Medium"}, {"type": "Claymation", "diff": "Hard"}],
-          "cat": ["Person", "Movie"]
-      },
-      {
-          "word": "Cat",
-          "game": [{"type": "Pictionary", "diff": "Easy"}, {"type": "Claymation", "diff": "Hard"}],
-          "cat": ["Animal"]
-      }
-]
+let word_items
 
 interface ChildProps {
-  newSubmittedWord: NewWord;
+  words: Word[];
+  loading: boolean;
+  error: string;
+  updateWord: (message: Word) => void; 
+  deleteWord: (message: Word) => void; 
 }
 
-const word_list: React.FC<ChildProps> = ({newSubmittedWord}) => {
-  const word_items = words.map(word => 
-    <div className='wl-body'>
-      <div className='wl-words br'>
-          {word.word}
-        </div>
-        <div className='wl-type-diff br'>
-          
-          {word.game.map((game, index) => 
-            <span className={game.diff}>{game.type} - {game.diff}{index !== word.game.length - 1 && ', '}</span>
-          )}
-        </div>
-        <div className='wl-categories'>
-          {word.cat.map((cat, index) => 
-            <span>{cat}{index !== word.cat.length - 1 && ', '}</span>
-          )}
-        </div>
-    </div>
-  );
+const word_list = ({words, loading, error, updateWord, deleteWord} : ChildProps) => {
+  const handleEdit = (e:any) => {
+    e.preventDefault();
+    console.log(e);
+  }
 
-  useEffect(() => {
+  const handleDelete = (e:any) => {
+    e.preventDefault();
+    console.log(e);
+  }
 
+
+    if (loading) return <div>Loading list...</div>;
+    if (error) return <div>Error: {error}</div>;
+
+    word_items = words.map(word => 
+      <div className='wl-body'key={word.word}>
+        <div className='wl-words br'>
+            {word.word}
+          </div>
+          <div className='wl-type-diff br'>
+            
+            {word.gameTypeAndDifficulty.map((game, index) => 
+              <span key={game.gameType} className={game.difficulty}>{game.gameType} - {game.difficulty}{index !== word.gameTypeAndDifficulty.length - 1 && ', '}</span>
+            )}
+          </div>
+          <div className='wl-categories'>
+            {word.category.map((cat, index) => 
+              <span key={cat}>{cat}{index !== word.category.length - 1 && ', '} &nbsp; 
+                <div className='edit' onClick={handleEdit}>&#9998;</div> &nbsp; 
+                <div className='delete' onClick={handleDelete}>&#128465;</div>
+              </span>
+              
+            )}
+          </div>
+      </div>
+    );
     
-    words.push({
-      "word": newSubmittedWord.word,
-      "cat": newSubmittedWord.category,
-      "game": newSubmittedWord.gameTypeAndDifficulty.map(m => {
-        return ({"type": m.gameType, "diff": m.difficulty})
-      
-      })
-    })
-  
-  }, [newSubmittedWord])
 
   return (
     <div className='wl-wrapper'>

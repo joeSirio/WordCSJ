@@ -1,0 +1,196 @@
+{
+    "_default": {
+        "1": {
+            "word": "Angel Island",
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Pictionary",
+                    "difficulty": "Easy"
+                },
+                {
+                    "gameType": "Claymation",
+                    "difficulty": "Hard"
+                }
+            ],
+            "category": [
+                "Places"
+            ]
+        },
+        "2": {
+            "word": "Cat",
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Pictionary",
+                    "difficulty": "Easy"
+                },
+                {
+                    "gameType": "Claymation",
+                    "difficulty": "Hard"
+                }
+            ],
+            "category": [
+                "Animal"
+            ]
+        },
+        "3": {
+            "word": "Poop",
+            "category": [
+                "Things"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Charades",
+                    "difficulty": "Medium"
+                },
+                {
+                    "gameType": "Claymation",
+                    "difficulty": "Easy"
+                },
+                {
+                    "gameType": "Pictionary",
+                    "difficulty": "Easy"
+                }
+            ]
+        },
+        "4": {
+            "word": "Table",
+            "category": [
+                "Things"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Charades",
+                    "difficulty": "Medium"
+                },
+                {
+                    "gameType": "Claymation",
+                    "difficulty": "Medium"
+                },
+                {
+                    "gameType": "Pictionary",
+                    "difficulty": "Easy"
+                }
+            ]
+        },
+        "5": {
+            "word": "Dog",
+            "category": [
+                "Animal"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Charades",
+                    "difficulty": "Easy"
+                },
+                {
+                    "gameType": "Claymation",
+                    "difficulty": "Medium"
+                }
+            ]
+        },
+        "6": {
+            "word": "Dog",
+            "category": [
+                "Animal"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Charades",
+                    "difficulty": "Easy"
+                },
+                {
+                    "gameType": "Claymation",
+                    "difficulty": "Medium"
+                },
+                {
+                    "gameType": "Pictionary",
+                    "difficulty": "Easy"
+                }
+            ]
+        },
+        "7": {
+            "word": "test",
+            "category": [
+                "Animal"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Charades",
+                    "difficulty": "Medium"
+                }
+            ]
+        },
+        "8": {
+            "word": "test 2",
+            "category": [
+                "Food"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Claymation",
+                    "difficulty": "Hard"
+                }
+            ]
+        },
+        "9": {
+            "word": "test 3",
+            "category": [
+                "Food"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Pictionary",
+                    "difficulty": "Hard"
+                }
+            ]
+        },
+        "10": {
+            "word": "tesat 4",
+            "category": [
+                "Movie"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Synced",
+                    "difficulty": "Hard"
+                }
+            ]
+        },
+        "11": {
+            "word": "test 5",
+            "category": [
+                "Food"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Claymation",
+                    "difficulty": "Hard"
+                }
+            ]
+        },
+        "12": {
+            "word": "test 6",
+            "category": [
+                "Movie"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Synced",
+                    "difficulty": "Medium"
+                }
+            ]
+        },
+        "13": {
+            "word": "testing 1",
+            "category": [
+                "Animal"
+            ],
+            "gameTypeAndDifficulty": [
+                {
+                    "gameType": "Charades",
+                    "difficulty": "Medium"
+                }
+            ]
+        }
+    }
+}

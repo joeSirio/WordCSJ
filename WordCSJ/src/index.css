@@ -162,6 +162,29 @@
   align-items: center;
 }
 
+.wl-categories{
+  position:relative;
+}
+
+.wl-categories .edit, .wl-categories .delete{
+  position:absolute;
+  top:5px;
+  display: none;
+  cursor: pointer;
+}
+
+.wl-categories .edit{
+  right:35px;
+}
+
+.wl-categories .delete{
+  right:5px;
+}
+
+.wl-body:hover .edit,.wl-body:hover .delete{
+  display:block;
+}
+
 .Easy{
   color:#1DC386;
 }
