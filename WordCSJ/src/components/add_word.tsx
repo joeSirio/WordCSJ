@@ -12,10 +12,10 @@ import {
   ComboboxValue,
 } from "@/components/ui/combobox"
 import { Input } from "@/components/ui/input"
-import type { GameTypeAndDifficulty, NewWord } from "@/lib/NewSubmittedWord";
+import type { GameTypeAndDifficulty, Word } from "@/lib/NewSubmittedWord";
 
 interface ChildProps {
-  submitWord: (message: NewWord) => void; // A function that takes a string and returns nothing (void)
+  submitWord: (message: Word) => void; 
 }
 
 const add_word = ({submitWord} : ChildProps) => {
@@ -57,7 +57,7 @@ const add_word = ({submitWord} : ChildProps) => {
         if(word == ""|| categories.length < 1|| gtandD.length < 1)
             return;
 
-        let submitted_word : NewWord= {
+        let submitted_word : Word= {
             word: word,
             category: categories,
             gameTypeAndDifficulty: gtandD

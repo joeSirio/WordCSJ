@@ -19,8 +19,8 @@ export class GameTypeAndDifficulty {
   }
 }
 
-export class NewWord {
-    word: string; // Property
+export class Word {
+    word: string;
     category: string[];
     gameTypeAndDifficulty: GameTypeAndDifficulty[];
 
